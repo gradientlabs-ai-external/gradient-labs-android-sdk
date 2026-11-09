@@ -1,0 +1,18 @@
+[versions]
+agp = "9.0.1"
+junit = "4.13.2"
+activity = "1.12.4"
+webkit = "1.12.1"
+spotless = "6.25.0"
+ktlint = "1.0.1"
+json = "20240303"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-webkit = { group = "androidx.webkit", name = "webkit", version.ref = "webkit" }
+json = { group = "org.json", name = "json", version.ref = "json" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }

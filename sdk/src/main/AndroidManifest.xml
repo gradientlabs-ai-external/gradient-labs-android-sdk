@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The SDK loads the chat widget in a WebView, so it requires network
+         access. Declared here so it merges into the host app automatically. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <!-- singleTop so a present() while the chat is already on top reuses
+             the existing instance (onNewIntent) instead of stacking a second
+             WebView. -->
+        <activity
+            android:name="com.gradientlabs.chatsdk.internal.GradientChatActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode|keyboard|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop" />
+    </application>
+</manifest>
